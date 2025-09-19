@@ -15,15 +15,20 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //4 Routing Kodlari:
+app.post("/create-item", (req, res) => {console.log(req.body);
+res.json({test: "success"});
+
+});
 app.get("/hello", function(req, res) {
     res.end(`<h1>GOOD MORNING</h1>`);
 } );
-app.get("/bye", function(req, res) {
-    res.end(`<h1>GOOD NIGHT</h1>`);
-} );
+app.get("/",function(req, res){
+    res.render("harid");
+});
+
 
 const server = http.createServer(app);
 let PORT = 3000;
-server.listen(PORT, function (){
+server.listen(PORT, function (req, res){
     console.log(`The server is running on the port ${PORT}`);
 });
