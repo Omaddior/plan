@@ -235,5 +235,19 @@ width: 100%;
 .intro {
     width: 438px;
     height: 68px;}
+.rightSideBottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-    
+}
+
+.midbottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 34px;
+  margin-right: 34px;
+  
+}

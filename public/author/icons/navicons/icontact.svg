@@ -1,0 +1,5 @@
+<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.000000" height="18.000000" fill="none">
+	<rect id="Icons/Contact" width="18.000000" height="18.000000" x="0.000000" y="0.000000" fill="rgb(114,114,114)" fill-opacity="0" />
+	<path id="Vector" d="M0 0L18 0L18 18L0 18L0 0Z" fill-rule="nonzero" />
+	<path id="Vector" d="M4.84125 14.25L1.5 16.875L1.5 3C1.5 2.80109 1.57902 2.61032 1.71967 2.46967C1.86032 2.32902 2.05109 2.25 2.25 2.25L15.75 2.25C15.9489 2.25 16.1397 2.32902 16.2803 2.46967C16.421 2.61032 16.5 2.80109 16.5 3L16.5 13.5C16.5 13.6989 16.421 13.8897 16.2803 14.0303C16.1397 14.171 15.9489 14.25 15.75 14.25L4.84125 14.25Z" fill="rgb(43,43,43)" fill-rule="nonzero" />
+</svg>
