@@ -13,14 +13,14 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 const fs = require("fs");
-let user;
-fs.readFile("database/user.json", "utf8", (err, data) => {
-    if (err){
-        console.log("ERROR")
-    } else {
-        user = JSON.parse(data)
-    }
-});
+// let user;
+// fs.readFile("database/user.json", "utf8", (err, data) => {
+//     if (err){
+//         console.log("ERROR")
+//     } else {
+//         user = JSON.parse(data)
+//     }
+// });
 
 //2. Sessions: SEssion Codes
 
