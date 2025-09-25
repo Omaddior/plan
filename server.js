@@ -10,7 +10,7 @@ useUnifiedTopology: true,
 if(err) console.log("Error: MongoDB connection");
 else{
     console.log("MongoDB connection is successful");
-    console.log(client);
+    module.exports = client;
     const app = require("./app");
     const server = http.createServer(app);
 let PORT = 3000;
