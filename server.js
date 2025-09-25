@@ -23,12 +23,12 @@ app.get("/hello", function(req, res) {
     res.end(`<h1>GOOD MORNING</h1>`);
 } );
 app.get("/",function(req, res){
-    res.render("harid");
+    res.render("reja");
 });
 
 
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function (req, res){
-    console.log(`The server is running on the port ${PORT}`);
+    console.log(`The server is running on the port ${PORT}, https://localhost${PORT}`);
 });

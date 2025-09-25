@@ -12,10 +12,8 @@
 <body style="background-color: lightgray;">
     <div class="container">
         <h1 class="display-4 text-align:center py-1">REJA VA MAQSADLAR</h1>
-    </div>
-    
     <div class="jumbotron p-3 shadow-sm">
-        <form class="create-form" action="/create-item" method="POST">
+        <form id="create-form" action="/create-item" method="POST">
             <div class="d-flex align-items-center">
                 <input
                     id="create-field"
@@ -26,10 +24,10 @@
                     type="text"
                     style="flex: 1"
                 />
-                <button class="btn btn-primary" style="border-radius: 20px">Yangi Harid qoshish</button>
+                <button class="btn btn-primary" style="border-radius: 20px">Yangi Reja Qo'shish</button>
             </div>
         </form>
     </div>
-
+    <button id="clean-all" class="btn btn-danger" style="border-radius: 20px;">Hamma rejalarni o'chirish</button>
 </body>
 </html>
