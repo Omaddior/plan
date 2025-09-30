@@ -73,19 +73,75 @@
 
 //Task B
 
-function countDigit (word){
-    let sum = 0;
-    for (let i = 0; i<word.length; i++){
-        const eachElement = word[i];
-        if(eachElement >=0 && eachElement <=9)
-        {
-            console.log("Qiymat: ", word[i]);
-            sum++;
-        }
+// function countDigit (word){
+//     let sum = 0;
+//     for (let i = 0; i<word.length; i++){
+//         const eachElement = word[i];
+//         if(eachElement >=0 && eachElement <=9)
+//         {
+//             console.log("Qiymat: ", word[i]);
+//             sum++;
+//         }
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
 
+  // vaqtni olish uchun yordamchi metod
+  getTime() {
+    const now = new Date();
+    let hours = now.getHours().toString().padStart(2, "0");
+    let minutes = now.getMinutes().toString().padStart(2, "0");
+    return `${hours}:${minutes}`;
+  }
+
+  // 1) qoldiq
+  qoldiq() {
+    console.log(
+      `Hozir ${this.getTime()} da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola mavjud`
+    );
+  }
+
+  // 2) sotish
+  sotish(product, qty) {
+    if (this[product] !== undefined) {
+      if (this[product] >= qty) {
+        this[product] -= qty;
+        console.log(
+          `${qty}ta ${product} sotildi. Yangi qoldiq: ${this[product]}`
+        );
+      } else {
+        console.log(`Yetarli ${product} yo'q!`);
+      }
+    } else {
+      console.log(`${product} mavjud emas`);
     }
-    console.log(`${word} sozi tarkibida ${sum} ta raqam mavjud...`);
-};
-countDigit("sana123");
-countDigit("j4n5j34njk5n43jk5n4jk");
+  }
+
+  // 3) qabul
+  qabul(product, qty) {
+    if (this[product] !== undefined) {
+      this[product] += qty;
+      console.log(
+        `${qty}ta ${product} qabul qilindi. Yangi qoldiq: ${this[product]}`
+      );
+    } else {
+      console.log(`${product} mavjud emas`);
+    }
+  }
+}
+
+// --- Sinov ---
+const shop = new Shop(4, 5, 2);
+
+shop.qoldiq();  
+// Hozir 20:40 da 4ta non, 5ta lag'mon va 2ta cola mavjud
+
+shop.sotish("non", 3);  
+shop.qabul("cola", 4);  
+shop.qoldiq();  
+// Hozir 20:50 da 1ta non, 5ta lag'mon va 6ta cola mavjud
+
 

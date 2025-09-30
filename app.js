@@ -31,21 +31,20 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //4 Routing Kodlari:
-app.post("/create-item", (req, res) => {console.log(req.body);
-console.log('user entered /');
-const new_reja = req.body.reja;
-db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
-    if(err){
-        console.log(err);
-        res.end("Something went wrong");
+app.post("/create-item", (req, res) => {
+  const new_reja = req.body.reja;
+
+  db.collection("plans").insertOne({ reja: new_reja }, (err, result) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send("Something went wrong");
     }
-    else{
-        res.end("Successfully added"); 
-    }
+
+    res.json({ _id: result.insertedId, reja: new_reja });
+  });
 });
 
 
-});
 app.get("/hello", function(req, res) {
     res.end(`<h1>GOOD MORNING</h1>`);
 } );
