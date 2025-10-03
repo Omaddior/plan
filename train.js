@@ -149,17 +149,29 @@
 
 
 //Task D
- let a; let b;
-function checkContent (a, b) {
-  if(a===b) {
-    console.log("Qiymatlar teng....");
-  } else {
-    console.log("Qiymatlar teng emas.....");
-  }
+//  let a; let b;
+// function checkContent (a, b) {
+//   if(a===b) {
+//     console.log("Qiymatlar teng....");
+//   } else {
+//     console.log("Qiymatlar teng emas.....");
+//   }
+// }
+// checkContent(4, 5);
+// checkContent(4, 4);
+// checkContent("PlayStation", "playstation");
+// checkContent("PlayStation", "PlayStation");
+// checkContent(true, true);
+// checkContent(true, false);
+
+// Task E
+function reverseReader (string) {
+    let reverseName =[];
+    let newArray = string.split("");
+    reverseName = newArray.reverse();
+    console.log(reverseName.join(""));
 }
-checkContent(4, 5);
-checkContent(4, 4);
-checkContent("PlayStation", "playstation");
-checkContent("PlayStation", "PlayStation");
-checkContent(true, true);
-checkContent(true, false);
+reverseReader("salom");
+reverseReader("Banana");
+reverseReader("non");
+reverseReader("HELLO");
